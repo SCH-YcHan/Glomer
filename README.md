@@ -1,4 +1,4 @@
-# Glomerulus segmentation in large kidney images
+# Glomerulus segmentation in large kidney image
 ## Env setting (Local)
 ```
 OS: Windows 10 Pro
@@ -16,14 +16,17 @@ conda install pytorch torchvision torchaudio-cuda=11.7 -c pytorch -c nvidia
 conda install jupyter notebook
 ```
 ## Study process
-### 1. Make Pre-trained model (using HuBMAP dataset)
-- Make config file (mmdet format) & fine tuning the detection and segmentation model
-- Compare single class(only glomerulus) model with multi class(plus alpha) model
+### 1. Make Pre-trained model (using [HuBMAP dataset](https://www.kaggle.com/competitions/hubmap-hacking-the-human-vasculature))
+- Data preprocessing & Cross validation & Create annotation ([refer](https://www.kaggle.com/code/ammarnassanalhajali/hubmap-2023-k-fold-cv-coco-dataset-generator))
+- Make config file (mmdet format, [refer](https://www.kaggle.com/code/andtaichi/hubmap-mmdet-ver3-0-0-training)) & fine tuning the detection and segmentation model
+- Compare single class (only glomerulus) model with multi class (plus alpha) model
 - Evaluate model predictions and performance
-### 2. d
-- dd
+### 2. Glomerulus detection with Pre-trained model in large kidney image (59342 x 114316, 2.3 GB) 
+- Using [SAHI](https://github.com/obss/sahi) (Slicing Aided Hyper Inference)
+- But... very bad performance :(
+- Need to explore other methods
 ## Result
-### Glomerulus segmentation result (Kaggle HuBMAP Competition Dataset)
+### Glomerulus segmentation result (HuBMAP Dataset)
 ![image](https://github.com/SCH-YcHan/Glomer/assets/113504815/14bd08fd-62c7-4097-a3d6-130d00584bf2)
 ![image](https://github.com/SCH-YcHan/Glomer/assets/113504815/138dc0df-81f9-4515-8b53-00c4fd4a8c8f)
 
