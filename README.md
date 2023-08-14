@@ -15,6 +15,16 @@ activate HuBMAP
 conda install pytorch torchvision torchaudio-cuda=11.7 -c pytorch -c nvidia
 conda install jupyter notebook
 ```
+```
+# git clone this repository
+git clone 
+```
+```
+# git clone mmsegmentation
+git clone -b main https://github.com/open-mmlab/mmsegmentation.git
+cd mmsegmentation
+pip install -v -e .
+```
 ## Study process
 ### 1. Make Pre-trained model (using [HuBMAP dataset](https://www.kaggle.com/competitions/hubmap-hacking-the-human-vasculature))
 - Data preprocessing & Cross validation & Create annotation ([refer](https://www.kaggle.com/code/ammarnassanalhajali/hubmap-2023-k-fold-cv-coco-dataset-generator))
