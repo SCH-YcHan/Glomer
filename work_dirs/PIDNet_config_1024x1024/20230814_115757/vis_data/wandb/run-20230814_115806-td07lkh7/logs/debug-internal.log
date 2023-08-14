@@ -1,0 +1,211 @@
+2023-08-14 11:58:06,036 INFO    StreamThr :32400 [internal.py:wandb_internal():86] W&B internal server running at pid: 32400, started at: 2023-08-14 11:58:06.034240
+2023-08-14 11:58:06,039 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: status
+2023-08-14 11:58:06,053 INFO    WriterThread:32400 [datastore.py:open_for_write():85] open: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\run-td07lkh7.wandb
+2023-08-14 11:58:06,055 DEBUG   SenderThread:32400 [sender.py:send():379] send: header
+2023-08-14 11:58:06,311 DEBUG   SenderThread:32400 [sender.py:send():379] send: run
+2023-08-14 11:58:07,158 INFO    SenderThread:32400 [dir_watcher.py:__init__():211] watching files in: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files
+2023-08-14 11:58:07,158 INFO    SenderThread:32400 [sender.py:_start_run_threads():1121] run started: td07lkh7 with start time 1691981886.039244
+2023-08-14 11:58:07,159 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: summary_record
+2023-08-14 11:58:07,160 INFO    SenderThread:32400 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-14 11:58:07,192 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: check_version
+2023-08-14 11:58:07,192 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: check_version
+2023-08-14 11:58:07,320 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: run_start
+2023-08-14 11:58:07,427 DEBUG   HandlerThread:32400 [system_info.py:__init__():31] System info init
+2023-08-14 11:58:07,427 DEBUG   HandlerThread:32400 [system_info.py:__init__():46] System info init done
+2023-08-14 11:58:07,427 INFO    HandlerThread:32400 [system_monitor.py:start():181] Starting system monitor
+2023-08-14 11:58:07,428 INFO    SystemMonitor:32400 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-08-14 11:58:07,428 INFO    HandlerThread:32400 [system_monitor.py:probe():201] Collecting system info
+2023-08-14 11:58:07,439 INFO    SystemMonitor:32400 [interfaces.py:start():190] Started cpu monitoring
+2023-08-14 11:58:07,440 INFO    SystemMonitor:32400 [interfaces.py:start():190] Started disk monitoring
+2023-08-14 11:58:07,442 INFO    SystemMonitor:32400 [interfaces.py:start():190] Started gpu monitoring
+2023-08-14 11:58:07,451 INFO    SystemMonitor:32400 [interfaces.py:start():190] Started memory monitoring
+2023-08-14 11:58:07,503 INFO    SystemMonitor:32400 [interfaces.py:start():190] Started network monitoring
+2023-08-14 11:58:07,511 DEBUG   HandlerThread:32400 [system_info.py:probe():195] Probing system
+2023-08-14 11:58:07,542 DEBUG   HandlerThread:32400 [system_info.py:_probe_git():180] Probing git
+2023-08-14 11:58:07,815 DEBUG   HandlerThread:32400 [system_info.py:_probe_git():188] Probing git done
+2023-08-14 11:58:07,815 DEBUG   HandlerThread:32400 [system_info.py:probe():240] Probing system done
+2023-08-14 11:58:07,815 DEBUG   HandlerThread:32400 [system_monitor.py:probe():210] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.10.0', 'heartbeatAt': '2023-08-14T02:58:07.541746', 'startedAt': '2023-08-14T02:58:06.009903', 'docker': None, 'cuda': None, 'args': ('code/configs/PIDNet_config_1024x1024.py',), 'state': 'running', 'program': 'C:\\Users\\user\\Desktop\\HuBMAP\\mmsegmentation\\tools\\train.py', 'codePath': '..\\mmsegmentation\\tools\\train.py', 'git': {'remote': 'https://github.com/SCH-YcHan/Glomer.git', 'commit': 'f56d890e8c23c4e2d692e7d5f415bc17f0de8bca'}, 'email': 'ychan.sch@gmail.com', 'root': 'C:/Users/user/Desktop/HuBMAP/Glomer', 'host': 'DESKTOP-T52CT2E', 'username': 'user', 'executable': 'C:\\Users\\user\\anaconda3\\envs\\HuBMAP\\python.exe', 'cpu_count': 10, 'cpu_count_logical': 20, 'cpu_freq': {'current': 3696.0, 'min': 0.0, 'max': 3696.0}, 'cpu_freq_per_core': [{'current': 3696.0, 'min': 0.0, 'max': 3696.0}], 'disk': {'total': 953.2303047180176, 'used': 477.6075210571289}, 'gpu': 'NVIDIA GeForce RTX 2080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 63.681373596191406}}
+2023-08-14 11:58:07,815 INFO    HandlerThread:32400 [system_monitor.py:probe():211] Finished collecting system info
+2023-08-14 11:58:07,815 INFO    HandlerThread:32400 [system_monitor.py:probe():214] Publishing system info
+2023-08-14 11:58:07,815 DEBUG   HandlerThread:32400 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-08-14 11:58:07,816 DEBUG   HandlerThread:32400 [system_info.py:_save_pip():67] Saving pip packages done
+2023-08-14 11:58:07,817 DEBUG   HandlerThread:32400 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-08-14 11:58:07,821 ERROR   HandlerThread:32400 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2023-08-14 11:58:07,824 DEBUG   HandlerThread:32400 [system_info.py:_save_conda():86] Saving conda packages done
+2023-08-14 11:58:07,825 INFO    HandlerThread:32400 [system_monitor.py:probe():216] Finished publishing system info
+2023-08-14 11:58:07,832 DEBUG   SenderThread:32400 [sender.py:send():379] send: files
+2023-08-14 11:58:07,832 INFO    SenderThread:32400 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-08-14 11:58:07,847 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: stop_status
+2023-08-14 11:58:07,848 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: stop_status
+2023-08-14 11:58:08,153 DEBUG   SenderThread:32400 [sender.py:send():379] send: telemetry
+2023-08-14 11:58:08,154 DEBUG   SenderThread:32400 [sender.py:send():379] send: config
+2023-08-14 11:58:08,169 INFO    Thread-18 :32400 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\wandb-metadata.json
+2023-08-14 11:58:08,170 INFO    Thread-18 :32400 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\requirements.txt
+2023-08-14 11:58:08,171 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: log_artifact
+2023-08-14 11:58:08,172 INFO    Thread-18 :32400 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\conda-environment.yaml
+2023-08-14 11:58:08,173 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: log_artifact
+2023-08-14 11:58:08,173 INFO    Thread-18 :32400 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\wandb-summary.json
+2023-08-14 11:58:08,657 INFO    wandb-upload_0:32400 [upload_job.py:push():131] Uploaded file C:\Users\user\AppData\Local\Temp\tmpwrjy1dg6wandb\njoz2ix6-wandb-metadata.json
+2023-08-14 11:58:09,911 INFO    wandb-upload_0:32400 [upload_job.py:push():89] Uploaded file C:\Users\user\AppData\Local\wandb\wandb\artifacts\staging\tmppqritp5z
+2023-08-14 11:58:10,862 INFO    SenderThread:32400 [sender.py:send_request_log_artifact():1441] logged artifact source-Glomer-.._mmsegmentation_tools_train.py - {'id': 'QXJ0aWZhY3Q6NTQxMTAwMDY4', 'digest': 'c25f31683351c67d32493bd551e67424', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjkwMjU3NTg2', 'latestArtifact': None}, 'version': 'latest'}
+2023-08-14 11:58:10,862 DEBUG   SenderThread:32400 [sender.py:send():379] send: telemetry
+2023-08-14 11:58:11,865 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 11:58:13,340 DEBUG   SenderThread:32400 [sender.py:send():379] send: telemetry
+2023-08-14 11:58:13,365 DEBUG   SenderThread:32400 [sender.py:send():379] send: telemetry
+2023-08-14 11:58:16,266 DEBUG   SenderThread:32400 [sender.py:send():379] send: telemetry
+2023-08-14 11:58:16,648 DEBUG   SenderThread:32400 [sender.py:send():379] send: telemetry
+2023-08-14 11:58:17,660 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 11:58:17,700 DEBUG   SenderThread:32400 [sender.py:send():379] send: telemetry
+2023-08-14 11:58:18,217 DEBUG   SenderThread:32400 [sender.py:send():379] send: telemetry
+2023-08-14 11:58:19,053 DEBUG   SenderThread:32400 [sender.py:send():379] send: exit
+2023-08-14 11:58:19,053 INFO    SenderThread:32400 [sender.py:send_exit():584] handling exit code: 1
+2023-08-14 11:58:19,054 INFO    SenderThread:32400 [sender.py:send_exit():586] handling runtime: 11
+2023-08-14 11:58:19,058 INFO    SenderThread:32400 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-14 11:58:19,060 INFO    SenderThread:32400 [sender.py:send_exit():592] send defer
+2023-08-14 11:58:19,061 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:19,062 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 0
+2023-08-14 11:58:19,062 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:19,063 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 0
+2023-08-14 11:58:19,063 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 1
+2023-08-14 11:58:19,063 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:19,064 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 1
+2023-08-14 11:58:19,065 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:19,065 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 1
+2023-08-14 11:58:19,065 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 2
+2023-08-14 11:58:19,065 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:19,066 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 2
+2023-08-14 11:58:19,066 INFO    HandlerThread:32400 [system_monitor.py:finish():190] Stopping system monitor
+2023-08-14 11:58:19,066 DEBUG   SystemMonitor:32400 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-08-14 11:58:19,067 INFO    HandlerThread:32400 [interfaces.py:finish():202] Joined cpu monitor
+2023-08-14 11:58:19,068 DEBUG   SystemMonitor:32400 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-08-14 11:58:19,085 INFO    HandlerThread:32400 [interfaces.py:finish():202] Joined disk monitor
+2023-08-14 11:58:19,086 DEBUG   SystemMonitor:32400 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-08-14 11:58:19,167 INFO    HandlerThread:32400 [interfaces.py:finish():202] Joined gpu monitor
+2023-08-14 11:58:19,168 INFO    HandlerThread:32400 [interfaces.py:finish():202] Joined memory monitor
+2023-08-14 11:58:19,168 INFO    HandlerThread:32400 [interfaces.py:finish():202] Joined network monitor
+2023-08-14 11:58:19,170 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:19,170 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 2
+2023-08-14 11:58:19,170 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 3
+2023-08-14 11:58:19,171 DEBUG   SenderThread:32400 [sender.py:send():379] send: stats
+2023-08-14 11:58:19,171 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:19,175 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 3
+2023-08-14 11:58:19,176 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:19,176 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 3
+2023-08-14 11:58:19,176 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 4
+2023-08-14 11:58:19,177 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:19,177 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 4
+2023-08-14 11:58:19,178 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:19,178 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 4
+2023-08-14 11:58:19,178 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 5
+2023-08-14 11:58:19,178 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:19,179 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 5
+2023-08-14 11:58:19,179 DEBUG   SenderThread:32400 [sender.py:send():379] send: summary
+2023-08-14 11:58:19,181 INFO    SenderThread:32400 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-08-14 11:58:19,182 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:19,183 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 5
+2023-08-14 11:58:19,183 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 6
+2023-08-14 11:58:19,183 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:19,183 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 6
+2023-08-14 11:58:19,184 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:19,184 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 6
+2023-08-14 11:58:19,192 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: status_report
+2023-08-14 11:58:19,298 INFO    Thread-18 :32400 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\wandb-summary.json
+2023-08-14 11:58:19,299 INFO    Thread-18 :32400 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\output.log
+2023-08-14 11:58:19,501 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 7
+2023-08-14 11:58:19,502 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:19,502 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 7
+2023-08-14 11:58:19,503 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:19,503 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 7
+2023-08-14 11:58:20,188 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: poll_exit
+2023-08-14 11:58:20,312 INFO    Thread-18 :32400 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\config.yaml
+2023-08-14 11:58:20,972 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 8
+2023-08-14 11:58:20,972 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: poll_exit
+2023-08-14 11:58:20,973 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:20,973 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 8
+2023-08-14 11:58:20,974 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:20,974 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 8
+2023-08-14 11:58:20,975 INFO    SenderThread:32400 [job_builder.py:build():281] Attempting to build job artifact
+2023-08-14 11:58:20,980 INFO    SenderThread:32400 [job_builder.py:_get_source_type():400] is repo sourced job
+2023-08-14 11:58:20,983 INFO    SenderThread:32400 [job_builder.py:build():374] adding wandb-job metadata file
+2023-08-14 11:58:21,041 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 9
+2023-08-14 11:58:21,042 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:21,042 DEBUG   SenderThread:32400 [sender.py:send():379] send: artifact
+2023-08-14 11:58:21,042 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 9
+2023-08-14 11:58:21,192 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: poll_exit
+2023-08-14 11:58:21,319 INFO    Thread-18 :32400 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\output.log
+2023-08-14 11:58:22,595 INFO    wandb-upload_0:32400 [upload_job.py:push():89] Uploaded file C:\Users\user\AppData\Local\wandb\wandb\artifacts\staging\tmp3n_08hx7
+2023-08-14 11:58:22,615 INFO    wandb-upload_1:32400 [upload_job.py:push():89] Uploaded file C:\Users\user\AppData\Local\wandb\wandb\artifacts\staging\tmp0ttju80p
+2023-08-14 11:58:24,015 INFO    SenderThread:32400 [sender.py:send_artifact():1475] sent artifact job-https___github.com_SCH-YcHan_Glomer.git_.._mmsegmentation_tools_train.py - {'id': 'QXJ0aWZhY3Q6NTQxMTAwMTU2', 'digest': '141aa4585f189e336403bf64e2162c7e', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjkwMjU3NTk0', 'latestArtifact': None}, 'version': 'latest'}
+2023-08-14 11:58:24,015 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:24,016 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 9
+2023-08-14 11:58:24,016 INFO    SenderThread:32400 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-08-14 11:58:24,350 INFO    SenderThread:32400 [dir_watcher.py:finish():388] scan: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files
+2023-08-14 11:58:24,351 INFO    SenderThread:32400 [dir_watcher.py:finish():402] scan save: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\conda-environment.yaml conda-environment.yaml
+2023-08-14 11:58:24,352 INFO    SenderThread:32400 [dir_watcher.py:finish():402] scan save: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\config.yaml config.yaml
+2023-08-14 11:58:24,353 INFO    SenderThread:32400 [dir_watcher.py:finish():402] scan save: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\output.log output.log
+2023-08-14 11:58:24,362 INFO    SenderThread:32400 [dir_watcher.py:finish():402] scan save: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\requirements.txt requirements.txt
+2023-08-14 11:58:24,371 INFO    SenderThread:32400 [dir_watcher.py:finish():402] scan save: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\wandb-metadata.json wandb-metadata.json
+2023-08-14 11:58:24,373 INFO    SenderThread:32400 [dir_watcher.py:finish():402] scan save: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\wandb-summary.json wandb-summary.json
+2023-08-14 11:58:24,382 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 10
+2023-08-14 11:58:24,383 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: poll_exit
+2023-08-14 11:58:24,383 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:24,391 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 10
+2023-08-14 11:58:24,392 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:24,393 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 10
+2023-08-14 11:58:24,394 INFO    SenderThread:32400 [file_pusher.py:finish():159] shutting down file pusher
+2023-08-14 11:58:24,849 INFO    wandb-upload_0:32400 [upload_job.py:push():131] Uploaded file C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\config.yaml
+2023-08-14 11:58:25,055 INFO    wandb-upload_2:32400 [upload_job.py:push():131] Uploaded file C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\requirements.txt
+2023-08-14 11:58:25,082 INFO    wandb-upload_3:32400 [upload_job.py:push():131] Uploaded file C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\wandb-summary.json
+2023-08-14 11:58:25,084 INFO    wandb-upload_1:32400 [upload_job.py:push():131] Uploaded file C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\files\output.log
+2023-08-14 11:58:25,299 INFO    Thread-17 (_thread_body):32400 [sender.py:transition_state():612] send defer: 11
+2023-08-14 11:58:25,299 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:25,300 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 11
+2023-08-14 11:58:25,301 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:25,301 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 11
+2023-08-14 11:58:25,301 INFO    SenderThread:32400 [file_pusher.py:join():164] waiting for file pusher
+2023-08-14 11:58:25,301 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 12
+2023-08-14 11:58:25,302 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:25,302 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 12
+2023-08-14 11:58:25,303 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:25,303 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 12
+2023-08-14 11:58:25,303 INFO    SenderThread:32400 [file_stream.py:finish():593] file stream finish called
+2023-08-14 11:58:25,550 INFO    SenderThread:32400 [file_stream.py:finish():597] file stream finish is done
+2023-08-14 11:58:25,550 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 13
+2023-08-14 11:58:25,551 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:25,551 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 13
+2023-08-14 11:58:25,552 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:25,552 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 13
+2023-08-14 11:58:25,553 INFO    SenderThread:32400 [sender.py:transition_state():612] send defer: 14
+2023-08-14 11:58:25,554 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: defer
+2023-08-14 11:58:25,554 DEBUG   SenderThread:32400 [sender.py:send():379] send: final
+2023-08-14 11:58:25,555 INFO    HandlerThread:32400 [handler.py:handle_request_defer():170] handle defer: 14
+2023-08-14 11:58:25,555 DEBUG   SenderThread:32400 [sender.py:send():379] send: footer
+2023-08-14 11:58:25,556 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: defer
+2023-08-14 11:58:25,556 INFO    SenderThread:32400 [sender.py:send_request_defer():608] handle sender defer: 14
+2023-08-14 11:58:25,560 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: poll_exit
+2023-08-14 11:58:25,560 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: server_info
+2023-08-14 11:58:25,560 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: get_summary
+2023-08-14 11:58:25,560 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: poll_exit
+2023-08-14 11:58:25,561 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: sampled_history
+2023-08-14 11:58:25,563 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: server_info
+2023-08-14 11:58:25,563 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: job_info
+2023-08-14 11:58:25,774 DEBUG   SenderThread:32400 [sender.py:send_request():406] send_request: job_info
+2023-08-14 11:58:25,776 INFO    MainThread:32400 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2023-08-14 11:58:25,776 INFO    MainThread:32400 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2023-08-14 11:58:25,776 INFO    MainThread:32400 [wandb_run.py:_footer_sync_info():3440] logging synced files
+2023-08-14 11:58:25,784 DEBUG   HandlerThread:32400 [handler.py:handle_request():144] handle_request: shutdown
+2023-08-14 11:58:25,784 INFO    HandlerThread:32400 [handler.py:finish():857] shutting down handler
+2023-08-14 11:58:26,577 INFO    WriterThread:32400 [datastore.py:close():294] close: C:\Users\user\Desktop\HuBMAP\Glomer\work_dirs\PIDNet_config_1024x1024\20230814_115757\vis_data\wandb\run-20230814_115806-td07lkh7\run-td07lkh7.wandb
+2023-08-14 11:58:26,781 INFO    SenderThread:32400 [sender.py:finish():1552] shutting down sender
+2023-08-14 11:58:26,781 INFO    SenderThread:32400 [file_pusher.py:finish():159] shutting down file pusher
+2023-08-14 11:58:26,781 INFO    SenderThread:32400 [file_pusher.py:join():164] waiting for file pusher

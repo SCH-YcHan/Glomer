@@ -1,0 +1,37 @@
+
+08/14 13:11:01 - mmengine - [97m[4mINFO[39m[24m - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+c:\users\user\desktop\hubmap\mmsegmentation\mmseg\models\decode_heads\decode_head.py:120: UserWarning: For binary segmentation, we suggest using`out_channels = 1` to define the outputchannels of segmentor, and use `threshold`to convert `seg_logits` into a predictionapplying a threshold
+  warnings.warn('For binary segmentation, we suggest using'
+c:\users\user\desktop\hubmap\mmsegmentation\mmseg\models\builder.py:36: UserWarning: ``build_loss`` would be deprecated soon, please use ``mmseg.registry.MODELS.build()``
+  warnings.warn('``build_loss`` would be deprecated soon, please use '
+c:\users\user\desktop\hubmap\mmsegmentation\mmseg\models\losses\cross_entropy_loss.py:235: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\mmengine\registry\build_functions.py", line 122, in build_from_cfg
+    obj = obj_cls(**args)  # type: ignore
+  File "c:\users\user\desktop\hubmap\mmsegmentation\mmseg\engine\hooks\visualization_hook.py", line 46, in __init__
+    SegLocalVisualizer.get_current_instance()
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\mmengine\utils\manager.py", line 143, in get_current_instance
+    raise RuntimeError(
+RuntimeError: Before calling SegLocalVisualizer.get_current_instance(), you should call get_instance(name=xxx) at least once.
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\HuBMAP\mmsegmentation\tools\train.py", line 107, in <module>
+    main()
+  File "C:\Users\user\Desktop\HuBMAP\mmsegmentation\tools\train.py", line 96, in main
+    runner = Runner.from_cfg(cfg)
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\mmengine\runner\runner.py", line 443, in from_cfg
+    runner = cls(
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\mmengine\runner\runner.py", line 423, in __init__
+    self.register_hooks(default_hooks, custom_hooks)
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\mmengine\runner\runner.py", line 1950, in register_hooks
+    self.register_default_hooks(default_hooks)
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\mmengine\runner\runner.py", line 1924, in register_default_hooks
+    self.register_hook(hook)
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\mmengine\runner\runner.py", line 1835, in register_hook
+    hook_obj = HOOKS.build(hook)
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\mmengine\registry\registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "C:\Users\user\anaconda3\envs\HuBMAP\lib\site-packages\mmengine\registry\build_functions.py", line 144, in build_from_cfg
+    raise type(e)(
+RuntimeError: class `SegVisualizationHook` in mmseg/engine/hooks/visualization_hook.py: Before calling SegLocalVisualizer.get_current_instance(), you should call get_instance(name=xxx) at least once.

@@ -1,0 +1,439 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.0
+    cli_version: 0.15.8
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1691982944.543105
+    t:
+      1:
+      - 1
+      - 37
+      - 41
+      - 55
+      - 60
+      - 82
+      2:
+      - 1
+      - 37
+      - 41
+      - 49
+      - 55
+      - 60
+      - 63
+      - 82
+      3:
+      - 23
+      4: 3.10.0
+      5: 0.15.8
+      8:
+      - 3
+      - 5
+checkpoint_file:
+  desc: null
+  value: https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/pidnet/pidnet-s_imagenet1k_20230306-715e6273.pth
+crop_size:
+  desc: null
+  value:
+  - 1024
+  - 1024
+data_preprocessor:
+  desc: null
+  value:
+    type: SegDataPreProcessor
+    mean:
+    - 123.675
+    - 116.28
+    - 103.53
+    std:
+    - 58.395
+    - 57.12
+    - 57.375
+    bgr_to_rgb: true
+    pad_val: 0
+    seg_pad_val: 255
+    size:
+    - 1024
+    - 1024
+norm_cfg:
+  desc: null
+  value:
+    type: SyncBN
+    requires_grad: true
+model:
+  desc: null
+  value:
+    type: EncoderDecoder
+    data_preprocessor:
+      type: SegDataPreProcessor
+      mean:
+      - 123.675
+      - 116.28
+      - 103.53
+      std:
+      - 58.395
+      - 57.12
+      - 57.375
+      bgr_to_rgb: true
+      pad_val: 0
+      seg_pad_val: 255
+      size:
+      - 1024
+      - 1024
+    backbone:
+      type: PIDNet
+      in_channels: 3
+      channels: 32
+      ppm_channels: 96
+      num_stem_blocks: 2
+      num_branch_blocks: 3
+      align_corners: false
+      norm_cfg:
+        type: SyncBN
+        requires_grad: true
+      act_cfg:
+        type: ReLU
+        inplace: true
+      init_cfg:
+        type: Pretrained
+        checkpoint: https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/pidnet/pidnet-s_imagenet1k_20230306-715e6273.pth
+    decode_head:
+      type: PIDHead
+      in_channels: 128
+      channels: 128
+      num_classes: 2
+      norm_cfg:
+        type: SyncBN
+        requires_grad: true
+      act_cfg:
+        type: ReLU
+        inplace: true
+      align_corners: true
+      loss_decode:
+      - type: CrossEntropyLoss
+        use_sigmoid: false
+        loss_weight: 0.4
+      - type: OhemCrossEntropy
+        thres: 0.9
+        min_kept: 131072
+        loss_weight: 1.0
+      - type: BoundaryLoss
+        loss_weight: 20.0
+      - type: OhemCrossEntropy
+        thres: 0.9
+        min_kept: 131072
+        loss_weight: 1.0
+    train_cfg: {}
+    test_cfg:
+      mode: whole
+dataset_type:
+  desc: null
+  value: CustomDataset
+data_root:
+  desc: null
+  value: C:/Users/user/Desktop/HuBMAP/cut_1024/
+backend_args:
+  desc: null
+  value: null
+classes:
+  desc: null
+  value:
+  - background
+  - glomerulus
+train_pipeline:
+  desc: null
+  value:
+  - type: LoadImageFromFile
+  - type: LoadAnnotations
+  - type: RandomResize
+    scale:
+    - 2048
+    - 1024
+    ratio_range:
+    - 0.5
+    - 2.0
+    keep_ratio: true
+  - type: RandomCrop
+    crop_size:
+    - 1024
+    - 1024
+    cat_max_ratio: 0.75
+  - type: RandomFlip
+    prob: 0.5
+  - type: PhotoMetricDistortion
+  - type: PackSegInputs
+test_pipeline:
+  desc: null
+  value:
+  - type: LoadImageFromFile
+  - type: Resize
+    scale:
+    - 2048
+    - 1024
+    keep_ratio: true
+  - type: LoadAnnotations
+  - type: PackSegInputs
+img_ratios:
+  desc: null
+  value:
+  - 0.5
+  - 0.75
+  - 1.0
+  - 1.25
+  - 1.5
+  - 1.75
+tta_pipeline:
+  desc: null
+  value:
+  - type: LoadImageFromFile
+    backend_args: null
+  - type: TestTimeAug
+    transforms:
+    - - type: Resize
+        scale_factor: 0.5
+        keep_ratio: true
+      - type: Resize
+        scale_factor: 0.75
+        keep_ratio: true
+      - type: Resize
+        scale_factor: 1.0
+        keep_ratio: true
+      - type: Resize
+        scale_factor: 1.25
+        keep_ratio: true
+      - type: Resize
+        scale_factor: 1.5
+        keep_ratio: true
+      - type: Resize
+        scale_factor: 1.75
+        keep_ratio: true
+    - - type: RandomFlip
+        prob: 0.0
+        direction: horizontal
+      - type: RandomFlip
+        prob: 1.0
+        direction: horizontal
+    - - type: LoadAnnotations
+    - - type: PackSegInputs
+train_dataloader:
+  desc: null
+  value:
+    batch_size: 2
+    num_workers: 2
+    persistent_workers: true
+    sampler:
+      type: InfiniteSampler
+      shuffle: true
+    dataset:
+      type: CustomDataset
+      data_root: C:/Users/user/Desktop/HuBMAP/cut_1024/
+      data_prefix:
+        img_path: train_img/
+        seg_map_path: train_mask/
+      pipeline:
+      - type: LoadImageFromFile
+      - type: LoadAnnotations
+      - type: RandomResize
+        scale:
+        - 2048
+        - 1024
+        ratio_range:
+        - 0.5
+        - 2.0
+        keep_ratio: true
+      - type: RandomCrop
+        crop_size:
+        - 1024
+        - 1024
+        cat_max_ratio: 0.75
+      - type: RandomFlip
+        prob: 0.5
+      - type: PhotoMetricDistortion
+      - type: PackSegInputs
+val_dataloader:
+  desc: null
+  value:
+    batch_size: 1
+    num_workers: 4
+    persistent_workers: true
+    sampler:
+      type: DefaultSampler
+      shuffle: false
+    dataset:
+      type: CustomDataset
+      data_root: C:/Users/user/Desktop/HuBMAP/cut_1024/
+      data_prefix:
+        img_path: val_img/
+        seg_map_path: val_mask/
+      pipeline:
+      - type: LoadImageFromFile
+      - type: Resize
+        scale:
+        - 2048
+        - 1024
+        keep_ratio: true
+      - type: LoadAnnotations
+      - type: PackSegInputs
+test_dataloader:
+  desc: null
+  value:
+    batch_size: 1
+    num_workers: 4
+    persistent_workers: true
+    sampler:
+      type: DefaultSampler
+      shuffle: false
+    dataset:
+      type: CustomDataset
+      data_root: C:/Users/user/Desktop/HuBMAP/cut_1024/
+      data_prefix:
+        img_path: val_img/
+        seg_map_path: val_mask/
+      pipeline:
+      - type: LoadImageFromFile
+      - type: Resize
+        scale:
+        - 2048
+        - 1024
+        keep_ratio: true
+      - type: LoadAnnotations
+      - type: PackSegInputs
+val_evaluator:
+  desc: null
+  value:
+    type: IoUMetric
+    iou_metrics:
+    - mIoU
+test_evaluator:
+  desc: null
+  value:
+    type: IoUMetric
+    iou_metrics:
+    - mIoU
+iters:
+  desc: null
+  value: 120000
+optimizer:
+  desc: null
+  value:
+    type: SGD
+    lr: 0.01
+    momentum: 0.9
+    weight_decay: 0.0005
+optim_wrapper:
+  desc: null
+  value:
+    type: OptimWrapper
+    optimizer:
+      type: SGD
+      lr: 0.01
+      momentum: 0.9
+      weight_decay: 0.0005
+    clip_grad: null
+param_scheduler:
+  desc: null
+  value:
+  - type: PolyLR
+    eta_min: 0
+    power: 0.9
+    begin: 0
+    end: 120000
+    by_epoch: false
+default_hooks:
+  desc: null
+  value:
+    timer:
+      type: IterTimerHook
+    logger:
+      type: LoggerHook
+      interval: 50
+      log_metric_by_epoch: false
+    param_scheduler:
+      type: ParamSchedulerHook
+    checkpoint:
+      type: CheckpointHook
+      interval: 12000
+      by_epoch: false
+    sampler_seed:
+      type: DistSamplerSeedHook
+    visualization:
+      type: SegVisualizationHook
+randomness:
+  desc: null
+  value:
+    seed: 3500
+default_scope:
+  desc: null
+  value: mmseg
+env_cfg:
+  desc: null
+  value:
+    cudnn_benchmark: false
+    mp_cfg:
+      mp_start_method: fork
+      opencv_num_threads: 0
+    dist_cfg:
+      backend: nccl
+vis_backends:
+  desc: null
+  value:
+  - type: LocalVisBackend
+visualizer:
+  desc: null
+  value:
+    type: Visualizer
+    vis_backends:
+    - type: WandbVisBackend
+log_config:
+  desc: null
+  value:
+    hooks:
+    - type: TextLoggerHook
+    - type: WandbLoggerHook
+      init_kwargs:
+        project: mmsegmentation
+      interval: 10
+      log_dir: ./work_dirs/PIDNet_log
+log_processor:
+  desc: null
+  value:
+    type: LogProcessor
+    window_size: 50
+    by_epoch: true
+log_level:
+  desc: null
+  value: INFO
+load_from:
+  desc: null
+  value: null
+resume:
+  desc: null
+  value: false
+tta_model:
+  desc: null
+  value:
+    type: SegTTAModel
+train_cfg:
+  desc: null
+  value:
+    type: IterBasedTrainLoop
+    max_iters: 120000
+    val_interval: 12000
+val_cfg:
+  desc: null
+  value:
+    type: ValLoop
+test_cfg:
+  desc: null
+  value:
+    type: TestLoop
+launcher:
+  desc: null
+  value: none
+work_dir:
+  desc: null
+  value: ./work_dirs\PIDNet_config_1024x1024

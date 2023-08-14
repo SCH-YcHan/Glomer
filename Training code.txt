@@ -1,0 +1,4 @@
+[Train]
+activate HuBMAP
+cd Desktop/HuBMAP/Glomer
+python ../mmsegmentation/tools/train.py code/configs/PIDNet_config_1024x1024.py
