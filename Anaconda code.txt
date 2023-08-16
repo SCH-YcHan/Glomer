@@ -1,0 +1,9 @@
+[Train]
+activate HuBMAP
+cd Desktop/HuBMAP
+python mmsegmentation/tools/train.py mmsegmentation/configs/pidnet/pidnet-s_2xb6-120k_1024x1024-glomer.py
+
+[Test]
+activate HuBMAP
+cd Desktop/HuBMAP
+python mmsegmentation/tools/test.py work_dirs/pidnet-s_2xb6-120k_1024x1024-glomer/pidnet-s_2xb6-120k_1024x1024-glomer.py work_dirs/pidnet-s_2xb6-120k_1024x1024-glomer/iter_120000.pth --out test_result
