@@ -1,7 +1,7 @@
 [Train]
 activate HuBMAP
 cd Desktop/HuBMAP
-python mmsegmentation/tools/train.py mmsegmentation/configs/pidnet/pidnet-s_2xb6-120k_1024x1024-glomer.py
+python mmsegmentation/tools/train.py mmsegmentation/configs/pidnet/pidnet-s_2xb6-120k_256x256-glomer.py
 
 [Test]
 activate HuBMAP
