@@ -7,8 +7,8 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 from time import time
 from mmseg.apis import init_model, inference_model, show_result_pyplot
 
-config_path = '../../work_dirs/pidnet-s_2xb6-120k_256x256-glomer/pidnet-s_2xb6-120k_256x256-glomer.py'
-checkpoint_path = '../../work_dirs/pidnet-s_2xb6-120k_256x256-glomer/iter_300000.pth'
+config_path = '../../work_dirs/pidnet-s_2xb6-120k_1024x1024-glomer/pidnet-s_2xb6-120k_1024x1024-glomer.py'
+checkpoint_path = '../../work_dirs/pidnet-s_2xb6-120k_1024x1024-glomer/iter_120000.pth'
 
 model = init_model(config_path, checkpoint_path, device='cuda:0')
 
@@ -99,8 +99,7 @@ while(True):
     for i, color in enumerate(palette):
         seg_colored[seg_map == i] = color
     seg_screenshot = cv.addWeighted(screenshot, 0.7, seg_colored, 0.3, 0)
-    #vis_screenshot = show_result_pyplot(model, screenshot, seg_screenshot, show=False)
-    cv.imshow("Segmentation_256", seg_screenshot)
+    cv.imshow("Segmentation_1024", seg_screenshot)
     
     # debug the loop rate
     print('FPS {}'.format(1 / (time() - loop_time)))
