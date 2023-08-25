@@ -33,6 +33,9 @@ pip install -v -e .
 ## Study process
 
 ## Study result
+### 1. Segmentation
+
+### 2. Real-time segmentation
 ![Real-time segmentation](https://github.com/SCH-YcHan/Glomer/assets/113504815/e26e0efa-8ca7-4c79-b46c-52e58abde2e6)
 
 
