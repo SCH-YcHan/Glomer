@@ -85,7 +85,8 @@ class WindowCapture:
 
         return img
 
-wincap = WindowCapture("Motic Digital Slide Assistant")
+#wincap = WindowCapture("Motic Digital Slide Assistant")
+wincap = WindowCapture("Image Viewer")
 
 palette = model.dataset_meta["palette"]
 
