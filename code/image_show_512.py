@@ -25,7 +25,7 @@ def main():
     while True:
         image_path = image_files[current_image_index]
         img = cv2.imread(image_path)
-        cv2.imshow("Image Viewer", img)
+        cv2.imshow("Image Viewer 512", img)
 
         key = cv2.waitKey(0) & 0xFF
 

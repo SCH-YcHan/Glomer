@@ -85,12 +85,15 @@ class WindowCapture:
 
         return img
 
-#wincap = WindowCapture("Motic Digital Slide Assistant")
-wincap = WindowCapture("Image Viewer")
+wincap = WindowCapture("Image Viewer 1024")
 
 palette = model.dataset_meta["palette"]
 
 loop_time = time()
+
+count = 0
+Mean_FPS = 0
+
 while(True):
     screenshot = wincap.get_screenshot()
     pred_screenshot = inference_model(model, screenshot)
@@ -102,8 +105,14 @@ while(True):
     seg_screenshot = cv.addWeighted(screenshot, 0.7, seg_colored, 0.3, 0)
     cv.imshow("Segmentation_1024", seg_screenshot)
     
-    # debug the loop rate
-    print('FPS {}'.format(1 / (time() - loop_time)))
+    FPS = 1 / (time() - loop_time)
+    Mean_FPS += FPS
+    count += 1
+
+    if count % 50 == 0:
+        print('Mean FPS {}'.format(Mean_FPS/50))
+        Mean_FPS = 0
+
     loop_time = time()
 
     # press 'q' with the output window focused to exit.
