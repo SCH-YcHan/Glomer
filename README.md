@@ -27,9 +27,15 @@ pip install -v -e .
 ```
 ## Dataset
 
+## Usage model [[Xu et al. 2023](https://github.com/XuJiacong/PIDNet)]
+![image](https://github.com/SCH-YcHan/Glomer/assets/113504815/fbe6d90a-cfec-4e2c-ae7b-cca9f61f7387)
+
 ## Study process
 
 ## Study result
+### 1. Segmentation
+
+### 2. Real-time segmentation
 ![Real-time segmentation](https://github.com/SCH-YcHan/Glomer/assets/113504815/e26e0efa-8ca7-4c79-b46c-52e58abde2e6)
 
 
