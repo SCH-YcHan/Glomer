@@ -33,7 +33,8 @@ pip install -v -e .
 ## Study process
 
 ## Study result
-### 1. Segmentation
+### 1. Segmentation (green: ground truth, red: pred seg map)
+![image](https://github.com/SCH-YcHan/Glomer/assets/113504815/fdc4bc1e-8e92-4341-a58b-42c8d75dc0ad)
 
 ### 2. Real-time segmentation
 ![Real-time segmentation](https://github.com/SCH-YcHan/Glomer/assets/113504815/e26e0efa-8ca7-4c79-b46c-52e58abde2e6)
