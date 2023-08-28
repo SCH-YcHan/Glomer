@@ -30,8 +30,6 @@ pip install -v -e .
 ## Usage model [[Xu et al. 2023](https://github.com/XuJiacong/PIDNet)]
 ![image](https://github.com/SCH-YcHan/Glomer/assets/113504815/fbe6d90a-cfec-4e2c-ae7b-cca9f61f7387)
 
-## Study process
-
 ## Study result
 ### 1. Segmentation (Green: Ground truth, Red: Pred seg map)
 ![image](https://github.com/SCH-YcHan/Glomer/assets/113504815/fdc4bc1e-8e92-4341-a58b-42c8d75dc0ad)
