@@ -1,4 +1,4 @@
-# Glomerulus segmentation in kidney image (PAS)
+# Real-time glomerulus segmentation in kidney image (PAS)
 ## Env setting (Local)
 ```
 OS: Windows 10 Pro
